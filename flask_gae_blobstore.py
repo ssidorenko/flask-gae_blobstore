@@ -175,8 +175,9 @@ def save_blobs(fields, validators=None):
     i = 0
     for name, field in fields:
         value = field.stream.read()
+        logging.info(type(field.filename))
         result = BlobUploadResult(
-            name=re.sub(r'^.*\\', '', field.filename.decode('utf-8')),
+            name=re.sub(r'^.*\\', '', field.filename.encode('ascii', "replace")),
             type=field.mimetype,
             size=len(value),
             field=field,
