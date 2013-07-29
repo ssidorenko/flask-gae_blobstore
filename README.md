@@ -1,3 +1,6 @@
+**!!!**
+**The Blobstore Files API has been deprecated, you shouldn't use this library if starting a new project. Use Google Cloud Storage instead.**
+**!!!**
 # flask-gae_blobstore
 
 --------------
